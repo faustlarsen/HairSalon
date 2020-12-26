@@ -1,29 +1,29 @@
 # Eau Claire's Salon: Stylist-Client Database
 
-#### _A web app that tracks the vendors that purchase goods and the orders belonging to those vendors. 18/12/2020_
+#### _A web app that . 26/12/2020_
 
 #### By _**Constantine Yakubovski**_ 
 
 ## Description 
-_This web app will offer to add a vevdors and an ability to add orders to each vendor and keep track of them._
+_This web app will ._
 
 ### SPECS: ###
 
-1. SPEC: Create Vendor class with name, description and id.
+1. SPEC: 
 
-**Input**: "Suzie's Cafe" , "Coffe shop" 
+**Input**: 
 
-**Output**: "Suzie's Cafe" , "Coffe shop" , Id:1
+**Output**: 
 ____________________________________________________________________________________
 
-2. SPEC: Create Order class with name, description, price, date and id.
+2. SPEC: 
 
-**Input**:  "Suzie's Cafe" , "10 Croissants" , $10
+**Input**: 
 
-**Output**: "Suzie's Cafe" , "10 Croissants" , $10 , Id:1
+**Output**: 
 ____________________________________________________________________________________
 
-3. SPEC: Create iput forms for orders and  vendors and pages to navigate between them.
+3. SPEC: 
 
 **Input**: 
 
