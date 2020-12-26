@@ -27,7 +27,6 @@ namespace HairSalon
       services.AddEntityFrameworkMySql()
           .AddDbContext<HairSalonContext>(options => options
           .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
-
     }
 
     public void Configure(IApplicationBuilder app)
@@ -47,7 +46,6 @@ namespace HairSalon
       {
         await context.Response.WriteAsync("Something went wrong!");
       });
-
     }
   }
   
