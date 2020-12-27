@@ -12,13 +12,12 @@
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.StylistId)
-
+        <br>
+        <br>
         @Html.EditorFor(model => model.Name)
+        <br>
+        <br>
         @Html.LabelFor(model => model.Name)
-        <br>
-        <br>
-        @Html.TextBoxFor(model => model.Appointment)
-        @Html.LabelFor(model => model.Appointment)
         <br>
         <br>
         <input type="submit" class="btn btn-primary" value="Save" />

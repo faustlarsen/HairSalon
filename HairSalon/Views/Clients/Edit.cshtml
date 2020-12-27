@@ -4,21 +4,30 @@
 
 @model HairSalon.Models.Client
 <div class="container card">
-    <h3>UPDATE</h3>
 
-    <h3>UPDATE REQUEST: @Html.DisplayFor(model => model.Description)</h3>
-
-    @using (Html.BeginForm())
-    {
-        @Html.HiddenFor(model => model.ClientId)
-
-        @Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description)
-
-        @Html.LabelFor(model => model.Stylist)
-        @Html.DropDownList("StylistId")
-
-        <input type="submit" class="btn btn-primary" value="SAVE" />
-    }
-    <p>@Html.ActionLink("Back to list", "Index")</p>
+<h3>UPDATE CLIENT: @Html.DisplayFor(model => model.Name)</h3>
+    <div class="form-group">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.ClientId)
+            <br>
+            @Html.EditorFor(model => model.Description)
+            @Html.LabelFor(model => model.Description)
+            <br>
+            @Html.TextBoxFor(model => model.Appointment, "{0:MM/dd/yyyy}", new { @type="date"}) 
+            @Html.LabelFor(model => model.Appointment)
+            <br>
+            @Html.TextBoxFor(model => model.Time, "{0:HH:mm}", new { @type="time"}) 
+            @Html.LabelFor(model => model.Time)
+            <br>
+            @Html.DropDownList("StylistId")
+            @Html.LabelFor(model => model.Stylist)
+            <br>
+            <br>
+            <input type="submit" class="btn btn-primary" value="SAVE" />
+        }
+        <br>
+        <p>@Html.ActionLink("Back to list", "Index")</p>
+        <br>
+    </div>
 </div>

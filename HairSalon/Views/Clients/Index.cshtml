@@ -5,17 +5,17 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Client>;
 <div class="container card">
-    <h3>CLIENTS</h3>
+    <h3>CLIENTS LIST</h3>
 
     @if (@Model.Count == 0)
     {
       <h3>Add a Client</h3>
     } 
-
+    <br>
     @foreach (Client client in Model)
     {
       <li>@Html.ActionLink($"{client.Description}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
     }
-
+    <br>
     <p>@Html.ActionLink("Add new client", "Create")</p>
 </div>
