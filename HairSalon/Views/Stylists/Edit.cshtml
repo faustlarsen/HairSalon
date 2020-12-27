@@ -5,23 +5,26 @@
 @model HairSalon.Models.Stylist
 
 <div class="container card">
-    <h3>Edit</h3>
+    <h3>UPDATE</h3>
 
-    <h3>Edit this stylist: @Html.DisplayFor(model => model.Name)</h3>
+    <h3>Update Stylist: @Html.DisplayFor(model => model.Name)</h3>
 
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.StylistId)
 
-        @Html.LabelFor(model => model.Name)
         @Html.EditorFor(model => model.Name)
+        @Html.LabelFor(model => model.Name)
         <br>
         <br>
-        @* @Html.LabelFor(model => model.Appointment)
-        @Html.TextBoxFor(model => model.Appointment) *@
+        @Html.TextBoxFor(model => model.Appointment)
+        @Html.LabelFor(model => model.Appointment)
         <br>
-
+        <br>
         <input type="submit" class="btn btn-primary" value="Save" />
+        <br>
+        <br>
     }
     <p>@Html.ActionLink("Stylist List", "Index")</p>
+    <br>
 </div>

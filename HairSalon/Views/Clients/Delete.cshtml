@@ -8,9 +8,14 @@
     <h3>DELETE?</h3>
 
     @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
+    <br>
+    <br>
     @using (Html.BeginForm())
     {
         <input type="submit" class="btn btn-primary" value="Delete" />
     }
+    <br>
     @Html.ActionLink("Client List", "Index")
+    <br>
+    <br>
 </div>

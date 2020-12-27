@@ -7,17 +7,17 @@
     <h3>ADD NEW STYLIST</h3>
     @using (Html.BeginForm())
     {
-        @Html.LabelFor(model => model.Name)
         @Html.TextBoxFor(model => model.Name)
+        @Html.LabelFor(model => model.Name)
         <br>
-        @Html.LabelFor(model => model.Specialty)
         @Html.TextBoxFor(model => model.Specialty)
+        @Html.LabelFor(model => model.Specialty)
         <br>
-        @* @Html.LabelFor(model => model.Appointment)
-        @Html.TextBoxFor(model => model.Appointment) *@
-        
+        @Html.TextBoxFor(model => model.Appointment)
+        @Html.LabelFor(model => model.Appointment)
+        <br>
         <input type="submit" class="btn btn-primary" value="ADD" />
-
     }
+    <br>
     <p>@Html.ActionLink("Stylist List", "Index")</p> 
 </div>
