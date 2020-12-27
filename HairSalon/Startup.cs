@@ -31,23 +31,27 @@ namespace HairSalon
 
     public void Configure(IApplicationBuilder app)
     {
-      app.UseStaticFiles();
+        app.UseStaticFiles();
 
-      app.UseDeveloperExceptionPage();
+        app.UseDeveloperExceptionPage();
 
-      app.UseMvc(routes =>
-      {
-        routes.MapRoute(
-          name: "default",
-          template: "{controller=Home}/{action=Index}/{id?}");
-      });
+        app.UseMvc(routes =>
+        {
+            routes.MapRoute(
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
+          });
 
-      app.Run(async (context) =>
-      {
-        await context.Response.WriteAsync("Something went wrong!");
-      });
+        app.Run(async (context) =>
+        {
+            await context.Response.WriteAsync("Something went wrong!");
+        });
+    }
+
+    public static class DBConfiguration
+    {
+        public static string ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=constantine_yakubovski;";
     }
   }
-  
 }
 

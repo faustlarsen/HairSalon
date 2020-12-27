@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<h1>UPDATE</h1>
+
+<h4>UPDATE REQUEST: @Html.DisplayFor(model => model.Description)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ClientId)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId")
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
