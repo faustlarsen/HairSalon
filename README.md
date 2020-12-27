@@ -20,7 +20,7 @@ ________________________________________________________________________________
 
 **Input**: click on "Add New Stylist" , "Add New Client"
 
-**Output**: forms to add new stylist or client
+**Output**: forms to add new Stylist or client
 ____________________________________________________________________________________
 
 3. SPEC: Ability to view current stylists and their clients
@@ -31,21 +31,42 @@ ________________________________________________________________________________
 ____________________________________________________________________________________
 
 ## Setup/Installation Requirements
+STEP 1
+- Install [MySQL Workbench](https://dev.mysql.com/downloads/file/?id=484391)
+- Open MySQL Workbench and select the _Local instance 3306_ server.
+- Install  [.Net Core](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- `$ dotnet tool install -g dotnet-script` - use Terminal to Install REPL 
 
--  _Open Terminal_
+STEP 2
 -  `$ cd ~` - it will navigate to the user's home directory
 -  `$ cd desktop`- it will navigate to the desktop
--  `$ git clone` ,then copy/paste https://github.com/faustlarsen/HairSalon.Solution , then press enter - it will create the file on the desktop
+-  `$ git clone` ,then copy/paste https://github.com/faustlarsen/HairSalon , then press enter - it will create the file on the desktop
 -  `$ cd HairSalon.Solution` - it will enter the folder
 -  `$ code .` - it will launch VSCode ( text editor ) to open the file
--   Install  [.Net Core](https://dotnet.microsoft.com/download/dotnet-core/2.2)
--  `$ dotnet tool install -g dotnet-script`  - it will instal REPL to run the app
--  `$ dotnet build` - it will compile the app
--  `$ cd HairSalon` - it will navigate to the launching directory
--  `$ dotnet run` - it will prep the app for launching. Then in console click on (localhost:5000/) to view the app in the browser
+-  `$ touch appsettings.json` - create this file in root directory
+- Copy this and paste in appsettings.json file: 
+{
+  "ConnectionStrings": { "DefaultConnection": "Server=localhost;Port=3306;database=constantine_yakubovski;uid=root;pwd=epicodus;"
+  }
+}
+-  `$ dotnet restore`
+    
+STEP 3 
+## DATABASE SETUP 
+Copy and Paste the following commands in the terminal. (exclude '$' and '>')
+-  `$ mysql -uroot -pepicodus ` - start MySQL Server 
+-  `> CREATE DATABASE constantine_yakubovski; ` 
+-  `> USE constantine_yakubovski; `
+-  `> CREATE TABLE clients (ClientId INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, Name VARCHAR (255) DEFAULT NULL, Description VARCHAR (255), StylistId INT(11) DEFAULT NULL, Appointment DATETIME DEFAULT NULL); `
+-  `> CREATE TABLE stylists (StylistId INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, Name VARCHAR (255) DEFAULT NULL, Specialty VARCHAR (255) DEFAULT NULL); `
+- `> exit ` - to exit MySQL
+- `$ dotnet watch run ` - to run app the app
+- Then in console click on (localhost:5000) to view the app in the browser
 
 
 ## Known Bugs
+
+- Time doesn't update
 
 ## Support and contact details
 
