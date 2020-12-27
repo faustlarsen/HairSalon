@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace HairSalon.Models
 {
@@ -10,6 +11,8 @@ namespace HairSalon.Models
         }
             public int StylistId { get; set; }
             public string Name { get; set; }
+            public string Specialty {get; set; }
+            // public DateTime Appointment { get; set; }
             public virtual ICollection<Client> Clients { get; set; }
     }
 }
