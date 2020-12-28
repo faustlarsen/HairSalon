@@ -69,5 +69,24 @@ namespace HairSalon.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeleteAll()
+        {
+            var allClients = _db.Clients.ToList();
+            return View();
+        }
+
+        [HttpPost, ActionName("DeleteAll")]
+            public ActionResult DeleteAllConfirmed()
+        {
+            var allClients = _db.Clients.ToList();
+
+        foreach (var client in allClients)
+        {
+            _db.Clients.Remove(client);
+        }
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+@model List<HairSalon.Models.Stylist>;
+<h2>DELETE ALL?</h2>
+<br>
+
+@using (Html.BeginForm())
+{
+    <button class="btn btn-success" type="submit" value="DeleteAll">Delete All</button>
+}
+
+<h4>@Html.ActionLink("Back to Stylists", "Index")</h4>

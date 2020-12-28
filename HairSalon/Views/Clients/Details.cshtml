@@ -6,10 +6,9 @@
 <div class="container card">
     <h3>CLIENTS DETAILS</h3>
 
-    <hr />
     <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
     <h4>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h4>
-    <h4>@Html.DisplayNameFor(model => model.Appointment): @Html.DisplayFor(model => model.Appointment)</h4>
+    @* <h4>@Html.DisplayNameFor(model => model.Appointment): @Html.DisplayFor(model => model.Appointment)</h4> *@
 
     <p>@Html.ActionLink("UPDATE", "Edit", new { id = Model.ClientId })</p>
     <p>@Html.ActionLink("DELETE", "Delete", new { id = Model.ClientId })</p>
