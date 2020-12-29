@@ -5,7 +5,6 @@
 @model HairSalon.Models.Stylist
 
 <div class="container card">
-    <h3>UPDATE</h3>
 
     <h3>Update Stylist: @Html.DisplayFor(model => model.Name)</h3>
 
@@ -17,14 +16,10 @@
         @Html.LabelFor(model => model.Name)
         <br>
         <br>
-        @Html.TextBoxFor(model => model.Specialty)
-        @Html.LabelFor(model => model.Specialty)
-        <br>
-        <br>
         <input type="submit" class="btn btn-primary" value="Save" />
         <br>
         <br>
     }
-    <p>@Html.ActionLink("Stylist List", "Index")</p>
+    <strong><p>@Html.ActionLink("Stylist List", "Index")</strong></p>
     <br>
 </div>

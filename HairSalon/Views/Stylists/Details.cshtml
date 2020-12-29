@@ -7,14 +7,12 @@
 
 <div class="container card">
     <h3>STYLIST DETAILS</h3>
-    <hr />
     <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-    <h3>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h3>
 
     <ul>
     @if (@Model.Clients.Count == 0)
     {
-  
+      <p>@Html.ActionLink("Add Your First Client", "Create", "Clients")</p>
     }
 
     @foreach (Client client in @Model.Clients)
@@ -22,8 +20,8 @@
       <li>Description: @client.Description</li>
     }
     </ul>
-
-    <p>@Html.ActionLink("Stylist List", "Index")</p>
-    <p>@Html.ActionLink("UPDATE", "Edit", new { id = Model.StylistId })</p>
-    <p>@Html.ActionLink("DELETE", "Delete", new { id = Model.StylistId })</p>
+    <strong><p>@Html.ActionLink("FULL LIST", "Index")</p></strong>
+    <strong><p>@Html.ActionLink("UPDATE STYLIST", "Edit", new { id = Model.StylistId })</p></strong>
+    <strong><p>@Html.ActionLink("DELETE STYLIST", "Delete", new { id = Model.StylistId })</p></strong>
+    <strong><p>@Html.ActionLink("Add Another Client", "Create", "Clients")</p></strong>
 </div>

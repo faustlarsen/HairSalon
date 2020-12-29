@@ -6,7 +6,7 @@
 @model List<HairSalon.Models.Stylist>;
 
 <div class="container card">
-    <h3>STYLISTS LIST</h3>
+    <h3>STYLISTS</h3>
 
     @if (@Model.Count == 0)
     {
@@ -15,10 +15,9 @@
     <br>
     @foreach (Stylist stylist in Model)
     {
-      <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+      <STRONG><p><li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li></p></STRONG>
     }
     <br>
-    <p>@Html.ActionLink("Add New Stylist", "Create")</p>
-    <h4>@Html.ActionLink("Delete All Stylists", "DeleteAll")</h4>
-    <br>
+  <strong><p>@Html.ActionLink("Add New Stylist", "Create")</strong></p>
+  <strong><p>@Html.ActionLink("Delete All Stylists", "DeleteAll")</strong></p>
 </div>

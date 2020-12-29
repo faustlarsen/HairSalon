@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+@model List<HairSalon.Models.Appointment>;
+
+<h2>Are you sure you want to delete all appointments?</h2>
+
+
+@using (Html.BeginForm())
+{
+    <button class="btn btn-success" type="submit" value="DeleteAll">Delete All Appointments</button>
+}
+
+<h4>@Html.ActionLink("Appointment Overview", "Index")</h4>

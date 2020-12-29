@@ -5,7 +5,7 @@
 @model HairSalon.Models.Stylist
 
 <div class="container card">
-    <h3>DELETE?</h3>
+    <h3>DELETE STYLIST?</h3>
 
     @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
     <br>
@@ -15,8 +15,6 @@
         <input type="submit" class="btn btn-primary" value="Delete" />
     }
     <br>
-    <br>
-    @Html.ActionLink("Stylist List", "Index")
-    <br>
+    <strong><p>@Html.ActionLink("FULL LIST", "Index")</p></strong>x
     <br>
 </div>

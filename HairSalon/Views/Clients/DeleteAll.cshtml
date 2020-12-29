@@ -3,13 +3,10 @@
 }
 @model List<HairSalon.Models.Client>;
 
-<h2>DELETE ALL?</h2>
-<br>
-
+<h2>DELETE ALL CLIENTS?</h2>
 @using (Html.BeginForm())
 {
-    <button class="btn btn-primary" type="submit" value="DeleteAll">Delete All</button>
+    <button class="btn btn-primary" type="submit" value="DeleteAll">YES</button>
 }
 <br>
-
-<h4>@Html.ActionLink("Client List", "Index")</h4>
+<strong><p>@Html.ActionLink("FULL LIST", "Index")</p></strong>
