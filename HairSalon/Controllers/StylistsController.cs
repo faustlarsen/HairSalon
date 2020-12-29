@@ -12,9 +12,12 @@ namespace HairSalon.Controllers
 
         public StylistsController(HairSalonContext db) => _db = db;
 
-        public ActionResult Index()
+        public ActionResult Index(string StylistSearch)
         {
             List<Stylist> model = _db.Stylists.ToList();
+            if(StylistSearch!=null){
+                model = _db.Stylists.Where(stylist => stylist.Name.Contains(StylistSearch)).ToList();
+            }
             return View(model);
         }
 

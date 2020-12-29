@@ -12,9 +12,12 @@ namespace HairSalon.Controllers
         private readonly HairSalonContext _db;
         public ClientsController(HairSalonContext db) => _db = db;
 
-        public ActionResult Index()
+        public ActionResult Index(string ClientSearch)
         {
             List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
+            if(ClientSearch!=null){
+                model = _db.Clients.Where(clients => clients.Name.Contains(ClientSearch)).ToList();
+            }
             return View(model);
         }
 
