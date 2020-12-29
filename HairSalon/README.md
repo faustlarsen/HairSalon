@@ -61,7 +61,7 @@ Copy and Paste the following commands in the terminal. (exclude '$' and '>')
 -  `> CREATE TABLE stylists (StylistId INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, Name VARCHAR (255) DEFAULT NULL, Specialty VARCHAR (255) DEFAULT NULL); `
 -  `> CREATE TABLE appointments (AppointmentId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, StylistId int(11) NOT NULL, ClientId int(11) NOT NULL, DateTime datetime(6) NOT NULL); `
 - `> exit ` - to exit MySQL
-- `$ dotnet watch run ` - to run app the app
+- `$ dotnet watch run ` - to run the app
 - Then in console click on (localhost:5000) to view the app in the browser
 
 
@@ -84,7 +84,7 @@ __faustlarsen@gmail.com__
 
 -  _HTML_
 
-- _ Entity_
+- _Entity_
 
 -  _Written in VS Code_
 
