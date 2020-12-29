@@ -4,6 +4,7 @@
 @model HairSalon.Models.Client
 <div class="container card">
     <h3>ADD NEW CLIENT</h3>
+    <hr>
     @using (Html.BeginForm())
     {   
       <div class="form-group">
@@ -21,3 +22,4 @@
     }
     <strong><p>@Html.ActionLink("FULL LIST", "Index")</p></strong>
 </div>
+<hr>

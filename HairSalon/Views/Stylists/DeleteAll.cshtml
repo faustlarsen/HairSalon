@@ -4,9 +4,11 @@
 @model List<HairSalon.Models.Stylist>;
 
 <h2>DELETE ALL STYLISTS?</h2>
+<hr>
 @using (Html.BeginForm())
 {
     <button class="btn btn-primary" type="submit" value="DeleteAll">YES</button>
 }
 <br>
 <strong><p>@Html.ActionLink("FULL LIST", "Index")</p></strong>
+<hr>

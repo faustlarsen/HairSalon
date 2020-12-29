@@ -7,8 +7,8 @@
 
 <div class="container card">
     <h3>STYLIST DETAILS</h3>
+    <hr>
     <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-
     <ul>
     @if (@Model.Clients.Count == 0)
     {
@@ -25,3 +25,4 @@
     <strong><p>@Html.ActionLink("DELETE STYLIST", "Delete", new { id = Model.StylistId })</p></strong>
     <strong><p>@Html.ActionLink("ADD CLIENT", "Create", "Clients")</p></strong>
 </div>
+<hr>

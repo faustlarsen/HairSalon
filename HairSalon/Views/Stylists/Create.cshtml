@@ -5,6 +5,7 @@
 @model HairSalon.Models.Stylist
 <div class="container card">
     <h3>ADD NEW STYLIST</h3>
+    <hr>
     @using (Html.BeginForm())
     {
         @Html.TextBoxFor(model => model.Name, new { @required = true })
@@ -15,3 +16,4 @@
     <br>
     <strong><p>@Html.ActionLink("FULL LIST", "Index")</p></strong>
 </div>
+<hr>
