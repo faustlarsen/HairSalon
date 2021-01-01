@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    <div class="col-md-4" class="container card" style="margin: auto;">
+  <div class="nav">
+    <nav class="navbar navbar-expand">
+      <h4>Eau Claire's Salon</h4>
+      <ul class="navbar-nav">
+        <a class="nav-link" href="/">HOME</a>  
+        <a class="nav-link" href="/Stylists">STYLISTS</a>
+        <a class="nav-link" href="/Clients">CLIENTS</a>
+        <a class="nav-link" href="/Appointments">APPOINTMENTS</a>
+      </ul>
+      </nav>
+    </div>
+    <br>
+    <br>
+    <div class="col-md-5" class="container card" style="margin: auto;">
       @RenderBody()
       @Html.Partial("Footer")
-  
     </div>
   </body>
 </html>
