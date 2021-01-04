@@ -3,23 +3,23 @@
 }
 @model HairSalon.Models.Appointment
 <h2>CREATE AN APPOINTMENT</h2>
-
-@using (Html.BeginForm())
-{
-    
-    @Html.DropDownList("StylistId", null, new { @class = "textBox"})
-    @Html.LabelFor(model => model.Stylist, "Stylist's Name")
+<div class="container card">
+    @using (Html.BeginForm())
+    {
+        @Html.DropDownList("StylistId", null, new { @class = "textBox"})
+        @Html.LabelFor(model => model.Stylist, "Stylist's Name")
+        <br>
+        <br>
+        @Html.DropDownList("ClientId", null, new { @class = "textBox"})
+        @Html.LabelFor(model => model.Client, "Client's Name")
+        <br>
+        <br>
+        @Html.EditorFor(model => model.DateTime)
+        @Html.LabelFor(model => model.DateTime, "Date & Time", new { @class = "textBox"})
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit" value="Submit!" class="btn btn-default">CREATE</button>
+    }
     <br>
-    <br>
-    @Html.DropDownList("ClientId", null, new { @class = "textBox"})
-    @Html.LabelFor(model => model.Client, "Client's Name")
-    <br>
-    <br>
-    @Html.EditorFor(model => model.DateTime)
-    @Html.LabelFor(model => model.DateTime, "Date & Time", new { @class = "textBox"})
-    <br>
-    <br>
-    <button class="btn btn-primary" type="submit" value="Submit!" class="btn btn-default">CREATE</button>
-}
-<br>
-<strong><p>@Html.ActionLink("Details", "Index")</strong></p>
+    <strong><p>@Html.ActionLink("Details", "Index")</strong></p>
+</div>
