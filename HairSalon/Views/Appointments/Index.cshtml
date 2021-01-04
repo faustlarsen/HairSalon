@@ -5,20 +5,22 @@
 @using HairSalon.Models
 @model List<HairSalon.Models.Appointment>
 
-<h2>Appointment Details</h2>
+<div class="container card">
+    <h2>Appointment Details</h2>
 
-@if (@Model.Count == 0)
-{
-  <p>There are no appointments</p>
-}
+    @if (@Model.Count == 0)
+    {
+      <p>There are no appointments</p>
+    }
 
-@foreach (Appointment newAppointment in Model)
-{
-    <h6>@Html.ActionLink($"{newAppointment.DateTime}", "Index", new { id = newAppointment.DateTime}, new { id = newAppointment.AppointmentId }) 
-    | Stylist: @Html.ActionLink($"{newAppointment.Stylist.Name}", "Details", "Stylists", new { id = newAppointment.StylistId }) 
-    | Client: @Html.ActionLink($"{newAppointment.Client.Name}", "Details", "Clients", new { id = newAppointment.ClientId }) 
-    | Haircut Description: @Html.ActionLink($"{newAppointment.Client.Description}", "Details", "Clients", new { id = newAppointment.ClientId})</h6>
-}
-<hr>
-<h4>@Html.ActionLink("Make Appointment", "Create")</h4>
-<h4>@Html.ActionLink("Delete All Appointments", "DeleteAll")</h4>
+    @foreach (Appointment newAppointment in Model)
+    {
+        <h6>@Html.ActionLink($"{newAppointment.DateTime}", "Index", new { id = newAppointment.DateTime}, new { id = newAppointment.AppointmentId }) 
+        | Stylist: @Html.ActionLink($"{newAppointment.Stylist.Name}", "Details", "Stylists", new { id = newAppointment.StylistId }) 
+        | Client: @Html.ActionLink($"{newAppointment.Client.Name}", "Details", "Clients", new { id = newAppointment.ClientId }) 
+        | Haircut Description: @Html.ActionLink($"{newAppointment.Client.Description}", "Details", "Clients", new { id = newAppointment.ClientId})</h6>
+    }
+    <hr>
+    <h4>@Html.ActionLink("Make Appointment", "Create")</h4>
+    <h4>@Html.ActionLink("Delete All Appointments", "DeleteAll")</h4>
+</div>

@@ -1,13 +1,26 @@
 
 .card  {
-  margin-top: 3%;
-  margin-bottom: 3%;
-  padding: 2%;
-  background-color: rgba(240, 10, 10, 0.75);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.87);
   border-radius: 10px;
+  color: rgb(0, 0, 0);
+
 }
 
 .nav {
-  background-color: rgba(238, 16, 16, 0.75);
-  font-family: 'Philosopher', sans-serif;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+  display: auto;
+  background-image: url("https://img.wallpapersafari.com/desktop/1600/900/1/16/LYmOy5.jpeg");
+}
+
+h4, h3, h2, a {
+  color: rgb(0, 0, 0);
+}
+h6 {
+  color: rgb(0, 0, 0);
 }
